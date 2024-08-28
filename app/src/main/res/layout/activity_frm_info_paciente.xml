@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".paciente.FrmInfoPacienteActivity"
+    android:background="@color/first_color">
+
+    <!-- header -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeaderFrmInfoPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:cardBackgroundColor="@color/first_color"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_header_form"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_logo"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvFormTitle"
+                    android:textColor="@color/first_color_logo"
+                    android:textStyle="bold"
+                    android:textSize="30sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmInfoPacienteInputs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cvHeaderFrmInfoPaciente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutFrmInfoPacienteBtns"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvInfoPacienteTitle"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvInfoPacienteDepartamento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/light"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="8dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerDepartamentoFrmInfoPaciente"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:minHeight="50dp"
+                        android:backgroundTint="@color/first_color"
+                        android:popupBackground="@color/light"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInicialesFrmInfoPaciente"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:hint="@string/etInfoPacienteIniciales"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvInfoPacienteSexo"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <RadioGroup
+                    android:id="@+id/rbGroupFrmInfoPaciente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbHombreFrmInfoPaciente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rbtnInfoPacienteSexoHombre"
+                        android:textColor="@color/light"
+                        android:buttonTint="@color/second_color"/>
+
+                    <RadioButton
+                        android:id="@+id/rbMujerFrmInfoPaciente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rbtnInfoPacienteSexoMujer"
+                        android:textColor="@color/light"
+                        android:buttonTint="@color/second_color"/>
+                </RadioGroup>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/light"
+                        app:boxStrokeColor="@color/light"
+                        app:hintTextColor="@color/light"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFechaNacimientoFrmInfoPaciente"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="date"
+                            android:hint="@string/etInfoPacienteFechaNacimiento"
+                            android:textColor="@color/light"
+                            android:textCursorDrawable="@null"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:textColorHint="@color/light"
+                        app:boxStrokeColor="@color/light"
+                        app:hintTextColor="@color/light"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEdadFrmInfoPaciente"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:hint="@string/etInfoPacienteEdad"
+                            android:textColor="@color/light"
+                            android:textCursorDrawable="@null"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/light"
+                        app:boxStrokeColor="@color/light"
+                        app:hintTextColor="@color/light"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPesoFrmInfoPaciente"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/etInfoPacientePeso"
+                            android:textColor="@color/light"
+                            android:textCursorDrawable="@null"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:textColorHint="@color/light"
+                        app:boxStrokeColor="@color/light"
+                        app:hintTextColor="@color/light"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAlturaFrmInfoPaciente"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/etInfoPacienteAltura"
+                            android:textColor="@color/light"
+                            android:textCursorDrawable="@null"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvInfoPacienteEmbarazada"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/light"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="8dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerEmbarazadaFrmInfoPaciente"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:minHeight="50dp"
+                        android:backgroundTint="@color/first_color"
+                        android:popupBackground="@color/light"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- botones -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmInfoPacienteBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFrmInfoPacienteInputs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/second_color_logo"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp">
+
+            <Button
+                android:id="@+id/btnAtrasFrmInfoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/btnPrevious"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:backgroundTint="@color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/third_color"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            >
+
+            <Button
+                android:id="@+id/btnSiguienteFrmInfoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/btnNext"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:backgroundTint="@color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

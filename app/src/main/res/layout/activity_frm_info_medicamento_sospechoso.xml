@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".medicamento.FrmInfoMedicamentoSospechosoActivity"
+    android:background="@color/first_color">
+
+    <!-- header -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeaderFrmInfoMedicamentoSospechoso"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:cardBackgroundColor="@color/first_color"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_header_form"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_logo"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvFormTitle"
+                    android:textColor="@color/first_color_logo"
+                    android:textStyle="bold"
+                    android:textSize="30sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmInfoMedicamentoSospechosoInputs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cvHeaderFrmInfoMedicamentoSospechoso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutFrmInfoMedicamentoSospechosoBtns"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvMedicamentoSospechosoTitle"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNombreMedicamentoFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:hint="@string/etMedicamentoSospechosoName"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/light"
+                        app:boxStrokeColor="@color/light"
+                        app:hintTextColor="@color/light"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDosisFrmInfoMedicamentoSospechoso"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:hint="@string/etMedicamentoSospechosoDosis"
+                            android:textColor="@color/light"
+                            android:textCursorDrawable="@null"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:textColorHint="@color/light"
+                        app:boxStrokeColor="@color/light"
+                        app:hintTextColor="@color/light"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFrecuenciaFrmInfoMedicamentoSospechoso"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:hint="@string/etMedicamentoSospechosoFrecuencia"
+                            android:textColor="@color/light"
+                            android:textCursorDrawable="@null"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etViaAdministracionFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:hint="@string/etMedicamentoSospechosoViaAdministracion"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFechaInicioFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="date"
+                        android:hint="@string/etMedicamentoSospechosoFechaInicio"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFechaFinFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="date"
+                        android:hint="@string/etMedicamentoSospechosoFechaFin"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMotivoPrescripcionFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/etMedicamentoSospechosoMotivoIndicacion"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        android:maxLines="3"
+                        android:gravity="top"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColorHint="@color/light"
+                    app:boxStrokeColor="@color/light"
+                    app:hintTextColor="@color/light"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNroLoteFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:hint="@string/etMedicamentoSospechosoNroLote"
+                        android:textColor="@color/light"
+                        android:textCursorDrawable="@null"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvMedicamentoSospechosoAccionConMedicamento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/light"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="8dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerAccionConMedicamentoFrmInfoMedicamentoSospechoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:minHeight="50dp"
+                        android:backgroundTint="@color/first_color"
+                        android:popupBackground="@color/light"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- botones -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmInfoMedicamentoSospechosoBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFrmInfoMedicamentoSospechosoInputs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/second_color_logo"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp">
+
+            <Button
+                android:id="@+id/btnAtrasFrmInfoMedicamentoSospechoso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/btnPrevious"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:backgroundTint="@color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/third_color"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            >
+
+            <Button
+                android:id="@+id/btnSiguienteFrmInfoMedicamentoSospechoso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/btnNext"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:backgroundTint="@color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

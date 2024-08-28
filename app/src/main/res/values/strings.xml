@@ -1,0 +1,226 @@
+<resources>
+    <string name="app_name">Farmacovigilancia</string>
+
+    <!-- Main screen -->
+    <string name="tvCaseReport">Reportar caso</string>
+    <string name="tvLogin">Iniciar sesión</string>
+    <string name="tvMedicamentosMain">Consultar medicamentos</string>
+    <string name="tvSobreNosotros">Sobre Nosotros</string>
+
+    <!-- Report Choice -->
+    <string name="tvHealthProfessional">Profesional de la salud</string>
+    <string name="tvPatient">Usuario / Paciente</string>
+
+    <!-- search medicamento -->
+    <string name="etBuscarSearchMedicamento">Ingrese nombre de medicamento</string>
+    <string name="btnBuscarSearchMedicamento">Buscar</string>
+
+    <!-- Formularios -->
+    <string name="tvFormTitle">Formulario de reporte</string>
+    <string name="btnPrevious">Atrás</string>
+    <string name="btnNext">Siguiente</string>
+
+    <!-- formulario info evento -->
+    <string name="tvInfoEventoTitle">Información sobre el evento</string>
+    <string name="etInfoEventoDescription">Descripción del evento adverso</string>
+    <string name="etInfoEventoFechaInicio">Fecha de inicio (yyyy/mm/dd)</string>
+    <string name="etInfoEventoFechaFin">Fecha de fin (yyyy/mm/dd)</string>
+    <string name="tvInfoEventoGravedad">¿El evento es grave?</string>
+    <string name="tvInfoEventoEstadoPaciente">Estado actual del paciente</string>
+
+    <!-- formulario info paciente -->
+    <string name="tvInfoPacienteTitle">Información sobre el paciente</string>
+    <string name="tvInfoPacienteDepartamento">Seleccione departamento de residencia</string>
+    <string name="etInfoPacienteIniciales">Ingrese iniciales del paciente</string>
+    <string name="tvInfoPacienteSexo">Sexo</string>
+    <string name="rbtnInfoPacienteSexoHombre">Hombre</string>
+    <string name="rbtnInfoPacienteSexoMujer">Mujer</string>
+    <string name="etInfoPacienteFechaNacimiento">Fecha nacimiento (yyyy/mm/dd)</string>
+    <string name="etInfoPacienteEdad">Edad</string>
+    <string name="etInfoPacientePeso">Peso (kg.)</string>
+    <string name="etInfoPacienteAltura">Altura (mts.)</string>
+    <string name="tvInfoPacienteEmbarazada">¿Embarazada o en período de lactancia?</string>
+
+    <!-- formulario info medicamento sospechoso -->
+    <string name="tvMedicamentoSospechosoTitle">Información sobre el medicamento sospechoso</string>
+    <string name="etMedicamentoSospechosoName">Ingrese nombre del medicamento</string>
+    <string name="etMedicamentoSospechosoDosis">Ingrese dosis</string>
+    <string name="etMedicamentoSospechosoFrecuencia">Ingrese frecuencia</string>
+    <string name="etMedicamentoSospechosoViaAdministracion">Ingrese vía de administración</string>
+    <string name="etMedicamentoSospechosoFechaInicio">Fecha inicio de la administración (yyyy/mm/dd)</string>
+    <string name="etMedicamentoSospechosoFechaFin">Fecha fin de la administración (yyyy/mm/dd)</string>
+    <string name="etMedicamentoSospechosoMotivoIndicacion">Ingrese motivo de indicación o prescripción</string>
+    <string name="etMedicamentoSospechosoNroLote">Número de lote</string>
+    <string name="tvMedicamentoSospechosoAccionConMedicamento">Acción tomada con el medicamento</string>
+
+    <!-- formulario info medicamento concomitante -->
+    <string name="tvMedicamentoConcomitanteTitle">Medicamentos concomitantes</string>
+    <string name="tvMedicamentoConcomitanteLista">Lista medicamentos</string>
+    <string name="etMedicamentoConcomitanteNombre">Ingrese nombre del medicamento</string>
+    <string name="etMedicamentoConcomitanteFechaInicio">Fecha inicio consumo (yyyy/mm/dd)</string>
+    <string name="etMedicamentoConcomitanteFechaFin">Fecha fin consumo (yyyy/mm/dd)</string>
+    <string name="etMedicamentoConcomitanteDosis">Ingrese dosis</string>
+    <string name="etMedicamentoConcomitanteFrecuencia">Ingrese frecuencia</string>
+    <string name="etMedicamentoConcomitanteViaAdministracion">Ingrese vía de administración</string>
+    <string name="etMedicamentoConcomitanteMotivoIndicacion">Ingrese motivo de indicación o prescripción</string>
+    <string name="btnAdd">Agregar</string>
+    <string name="btnCancel">Cancelar</string>
+
+    <!-- formulario info reportante -->
+    <string name="tvInfoReportanteTitle">Información del reportante</string>
+    <string name="etInfoReportanteNombre">Ingrese nombre</string>
+    <string name="etInfoReportanteTelefono">Ingrese teléfono</string>
+    <string name="etInfoReportanteCorreo">Ingrese correo</string>
+    <string name="etInfoReportanteProfesion">Ingrese profesión</string>
+    <string name="etInfoReportanteRelacionConPaciente">Ingrese relación con paciente</string>
+    <string name="tvInfoReportanteAutorizacion">¿Autoriza usted a ser contactado por nosotros en caso de ser necesaria información adicional para la evaluación</string>
+    <string name="rbtnInfoReportanteAutorizacionSi">Si</string>
+    <string name="rbtnInfoReportanteAutorizacionNo">No</string>
+    <string name="checkInfoReportanteTerminos">He leído y acepto los términos legales de comunicación de datos personales</string>
+
+    <!-- formulario resumen del reporte -->
+    <string name="tvResumenReporteTitle">Resumen de la información</string>
+    <string name="tvResumenReporteDatosPaciente">Datos del paciente</string>
+    <string name="tvResumenReporteDatosEvento">Datos del evento</string>
+    <string name="tvResumenReporteDatosMedicamento">Datos del medicamentos sospechoso</string>
+    <string name="tvResumenReporteDatosReportante">Datos del reportante</string>
+    <string name="tvResumenReporteDatosConcomitantes">Nombres de los concomitantes</string>
+    <string name="btnSend">Enviar</string>
+
+    <!-- confirmacion envio reporte -->
+    <string name="tvConfirmacionEnvioReporteTitulo">Envío de reporte</string>
+    <string name="tvConfirmacionEnvioReporteMensaje">Los datos han sido enviados con éxito.</string>
+    <string name="tvConfirmacionEnvioReporteFrase">Cada reacción cuenta: reporta, protege, previene ❤️🧑‍⚕️.</string>
+    <string name="tvConfirmacionEnvioReporteTexto">En … nos preocupamos por tu salud y todos los reportes son importantes para nosotros.</string>
+    <string name="cvConfirmacionEnvioReporteBtn">Volver al inicio</string>
+
+    <!-- Search medicamentos -->
+    <string name="tvSearchMedicamentoTitle">Búsqueda de medicamento por nombre</string>
+
+    <!-- Search Detalles medicamento -->
+    <string name="tvSearchDetalleMedicamentoTitle">Detalles del medicamento</string>
+    <string name="btnSearchDetalleMedicamentoVerFicha">Ver ficha técnica</string>
+    <string name="btnsearchDetalleMedicamentoVerProspecto">Ver prospecto</string>
+
+    <!-- activity login  -->
+    <string name="tvLoginIniciarSesion">Iniciar Sesión</string>
+    <string name="etLoginUser">Ingrese correo</string>
+    <string name="etLoginPassword">Ingrese contraseña</string>
+    <string name="btnLoginIngresar">Ingresar</string>
+
+    <!-- activity home  -->
+    <string name="tvHomeWelcome">Bienvenido</string>
+    <string name="tvHomeFarmacovigilancia">Farmacovigilancia</string>
+    <string name="tvHomeRAM">Sistema para el registro de las RAM (reacciones adversas a los medicamentos)</string>
+
+    <!--  navigation drawer header -->
+    <string name="tvHeaderTipoUsuario">Administrador</string>
+    <string name="tvHeaderNombreApellido">Nombre y apellido</string>
+
+    <!--  navigation drawer menu -->
+    <string name="itemMenuReportes">Reportes</string>
+    <string name="itemMenuAdministracion">Administración</string>
+    <string name="itemMenuGestionUsuarios">Gestionar usuarios</string>
+    <string name="itemMenuSalir">Salir</string>
+
+    <!-- admin - lista reportes -->
+    <string name="tvReportesTitle">Reportes</string>
+
+    <!-- detalles evento lista reportes -->
+    <string name="tvDialogDetallesFichaTitulo">Detalles de ficha de alerta</string>
+    <string name="tvDialogDetallesFichaClave">Clave</string>
+    <string name="tvDialogDetallesFichaDescripcion">Descripción</string>
+
+    <!-- detalles concomitantes lista reportes -->
+    <string name="tvDialogDetallesConcomitantesTitulo">Lista medicamentos concomitantes</string>
+
+    <!-- activity nostros  -->
+    <string name="tvNosotros">Nosotros</string>
+    <string name="tvNosotrosTitle">Acerca de nosotros</string>
+    <string name="tvNosotrosTextTitle">En …, nos enorgullece ser tu compañero confiable en el cuidado de la salud en la vibrante ciudad de Trujillo, Perú. Con un compromiso inquebrantable hacia el bienestar de nuestra comunidad, hemos establecido nuestra droguería como un faro de atención y servicio excepcionales.</string>
+    <string name="tvtNosotrosMision">Nuestra Misión</string>
+    <string name="tvNosotrosTextMision">El corazón de nuestra misión está la dedicación a tu salud. Nos esforzamos por proporcionar productos farmacéuticos de la más alta calidad, respaldados por un equipo profesional. En …, creemos que la salud es la base de una vida plena y estamos comprometidos a ser tu aliado confiable en este viaje.</string>
+
+    <!-- activity video  -->
+    <string name="tvVideo">Video</string>
+    <string name="titleVideo">Farmacovigilancia S.A.C.</string>
+    <string name="emailContactVideo">Correo electrónico</string>
+    <string name="emailDescriptionVideo">tufarmacovigilancia@hotmail.com - farma.cotizaciones@hotmail.com</string>
+    <string name="phoneVideo">Teléfono</string>
+    <string name="numberVideo">044-423000 -  990005111</string>
+
+    <!-- activity Mapa  -->
+    <string name="tvMapa">Mapa - Ubicación</string>
+
+    <!--  navigation drawer menu -->
+    <string name="itemMenuAcercaDeNosotros">Nosotros</string>
+    <string name="itemMenuAcercaDeMapa">Ubicación</string>
+    <string name="itemMenuAcercaDeVideo">Video</string>
+
+    <!-- arrays -->
+    <string-array name="optionsSexo">
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+
+    <string-array name="optionsMedioComunicacion">
+        <item>Formulario profesional</item>
+        <item>Formulario paciente</item>
+    </string-array>
+
+    <string-array name="optionsAccionConMedicamento">
+        <item>Dosis retirada</item>
+        <item>Dosis reducida</item>
+        <item>Dosis aumentada</item>
+        <item>Dosis no modificada</item>
+        <item>Desconocido</item>
+    </string-array>
+
+    <string-array name="optionsGravedadEvento">
+        <item>Leve</item>
+        <item>Moderado</item>
+        <item>Severo</item>
+    </string-array>
+
+    <string-array name="optionsEstadoActualPaciente">
+        <item>Recuperado</item>
+        <item>No Recuperado</item>
+        <item>En Recuperación</item>
+        <item>Deceso</item>
+        <item>Desconocido</item>
+    </string-array>
+
+    <string-array name="optionsEmbarazada">
+        <item>No</item>
+        <item>Si</item>
+        <item>No aplica</item>
+    </string-array>
+
+    <string-array name="arrayDepartamentos">
+        <item>Amazonas</item>
+        <item>Áncash</item>
+        <item>Apurímac</item>
+        <item>Arequipa</item>
+        <item>Ayacucho</item>
+        <item>Cajamarca</item>
+        <item>Cusco</item>
+        <item>Huacavelica</item>
+        <item>Huánuco</item>
+        <item>Ica</item>
+        <item>Junín</item>
+        <item>La Libertad</item>
+        <item>Lambayeque</item>
+        <item>Lima</item>
+        <item>Loreto</item>
+        <item>Madre de Dios</item>
+        <item>Moquegua</item>
+        <item>Pasco</item>
+        <item>Piura</item>
+        <item>Puno</item>
+        <item>San Martín</item>
+        <item>Tacna</item>
+        <item>Tumbes</item>
+        <item>Ucayali</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group
+        android:id="@+id/drawerMenuGroupGestion"
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/menuItemMapa"
+            android:title="@string/itemMenuAcercaDeMapa"
+            android:icon="@drawable/ic_location"/>
+
+        <item
+            android:id="@+id/menuItemNosotros"
+            android:title="@string/itemMenuAcercaDeNosotros"
+            android:icon="@drawable/ic_administracion"/>
+
+        <item
+            android:id="@+id/menuItemVideo"
+            android:title="@string/itemMenuAcercaDeVideo"
+            android:icon="@drawable/ic_video"/>
+
+    </group>
+
+    <group
+        android:id="@+id/drawerMenuGroupLogout"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menuItemLogoutAcercaDe"
+            android:title="@string/itemMenuSalir"
+            android:icon="@drawable/ic_logout"/>
+
+    </group>
+
+
+</menu>

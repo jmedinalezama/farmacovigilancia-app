@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".concomitante.FrmInfoConcomitantesActivity"
+    android:background="@color/first_color">
+
+    <!-- header -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeaderFrmInfoConcomitantes"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:cardBackgroundColor="@color/first_color"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_header_form"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_logo"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvFormTitle"
+                    android:textColor="@color/first_color_logo"
+                    android:textStyle="bold"
+                    android:textSize="30sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmInfoConcomitantesRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvHeaderFrmInfoConcomitantes"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutFrmInfoConcomitantesBtns">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvMedicamentoConcomitanteTitle"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvMedicamentoConcomitanteLista"
+            android:textColor="@color/light"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerConcomitantes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/item_concomitante"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- botones -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmInfoConcomitantesBtns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFrmInfoConcomitantesRecycler">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/transparent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/third_color"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    >
+
+                    <Button
+                        android:id="@+id/btnSiguienteFrmInfoConcomitante"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="@string/btnNext"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/light"
+                        android:backgroundTint="@color/transparent"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/second_color_logo"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <Button
+                        android:id="@+id/btnAtrasFrmInfoConcomitante"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="@string/btnPrevious"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/light"
+                        android:backgroundTint="@color/transparent"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/transparent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingEnd="20dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabNuevoFrmInfoConcomitante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"
+                    android:backgroundTint="@color/light"
+                    android:layout_gravity="center|end"
+                    app:fabCustomSize="64dp"
+                    app:tint="@color/first_color_logo"
+                    >
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

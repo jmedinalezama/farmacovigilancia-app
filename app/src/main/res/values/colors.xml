@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--  colores principales app -->
+    <!-- <color name="first_color_logo">#053398</color>
+    <color name="second_color_logo">#CA1534</color>
+    <color name="first_color">#368CCC</color>
+    <color name="second_color">#E90000</color>
+    <color name="third_color">#00A9EC</color> -->
+
+    <color name="first_color_logo">#008F8D</color>
+    <color name="second_color_logo">#BCCE01</color>
+    <color name="first_color">#11B8B3</color>
+    <color name="second_color">#D2D800</color>
+    <color name="third_color">#60CFCC</color>
+
+    <color name="light">#F4F4F6</color>
+    <color name="dark">#1E1E1E</color>
+
+    <!-- adicionales -->
+    <color name="dark_50">#803E3E3E</color>
+    <color name="light_50">#80F4F4F6</color>
+    <color name="light_75">#BFF4F4F6</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- colores cardView gravedad de evento -->
+    <color name="leve_color">#008F8D</color>
+    <color name="moderado_color">#EA6F03</color>
+    <color name="severo_color">#C52509</color>
+
+    <!-- colores de codinsa -->
+    <color name="verdeCodinsa">#3ca199</color>
+    <color name="amarilloVerdosoCodinsa">#aec70b</color>
+    <color name="verdeVarienateCodinsa">#11B8B3</color>
+    <color name="verdeAguaCodinsa"> #c9e2e9</color>
+
+
+</resources>

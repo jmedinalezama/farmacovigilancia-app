@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity"
+    tools:openDrawer="start">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/verdeAguaCodinsa"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_home_gradient"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayoutHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/verdeVarienateCodinsa"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayoutHome"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayoutHome"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayoutHome">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/toolBarHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:navigationIcon="@drawable/ic_menu"
+                        app:navigationIconTint="@color/light"
+                        app:title="@string/tvNosotros"
+                        app:titleTextColor="@color/light" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/ivLogoHome"
+                    app:layout_constraintEnd_toEndOf="@id/constraintLayoutHome"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayoutHome"
+                    app:layout_constraintTop_toBottomOf="@+id/appBarLayoutHome"
+                    app:layout_constraintVertical_bias="0.133">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tvNosotrosTitle"
+                        android:textColor="@color/amarilloVerdosoCodinsa"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tvNosotrosTextTitle"
+                        android:textColor="@color/verdeVarienateCodinsa"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tvtNosotrosMision"
+                        android:textColor="@color/amarilloVerdosoCodinsa"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/tvNosotrosTextMision"
+                        android:textColor="@color/verdeVarienateCodinsa"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <ImageView
+                    android:id="@+id/ivLogoHome"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_logo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraintLayoutHome"
+                    app:layout_constraintEnd_toEndOf="@id/constraintLayoutHome"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayoutHome" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationViewHome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/light"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_drawer_menu_acerca_de">
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

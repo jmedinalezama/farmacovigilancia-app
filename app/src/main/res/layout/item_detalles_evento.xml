@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/first_color"
+    android:layout_marginVertical="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:id="@+id/tvItemKeyDetalleEvento"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginEnd="5dp"
+            tools:text="Descripción"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:textColor="@color/light"
+            android:gravity="start"
+            />
+
+        <TextView
+            android:id="@+id/tvItemValueDetalleEvento"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginStart="15dp"
+            tools:text="Descripción completa del evento reportado por alguna persona."
+            android:textSize="14sp"
+            android:textColor="@color/light"
+            android:gravity="start"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resumenreporte.FrmResumenReporteActivity"
+    android:background="@color/first_color">
+
+    <!-- header -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeaderFrmResumenReporte"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:cardBackgroundColor="@color/first_color"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_header_form"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_logo"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvFormTitle"
+                    android:textColor="@color/first_color_logo"
+                    android:textStyle="bold"
+                    android:textSize="30sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmResumenReporteTextViews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cvHeaderFrmResumenReporte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutFrmResumenReporteBtns"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvResumenReporteTitle"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- datos evento-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvResumenReporteDatosEvento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvDescripcionEventoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Descripción"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvFechaInicioEventoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="F. inicio"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvFechaFinEventoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="F. fin"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvEstadoPacienteEventoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Estado del paciente"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvGravedadEventoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Gravedad del evento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <!-- datos evento-->
+
+                <!-- datos paciente-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvResumenReporteDatosPaciente"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvInicialesPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Iniciales"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvSexoPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Sexo"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvFechaNacPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="F. nacimiento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvEdadPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Edad"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvPesoPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Peso"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvEstaturaPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Estatura"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvEmbarazadaPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Embarazada o lactancia"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvDepartamentoPacienteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Departamento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <!-- datos paciente-->
+
+
+                <!-- datos medicamento -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvResumenReporteDatosMedicamento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvNombreMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Nombre"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvDosisMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Dosis"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvFrecuenciaMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Frecuencia"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvViaAdministracionMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Vía de administración"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvFechaInicioMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="F. inicio"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvFechaFinMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="F. fin"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvMotivoPrescripcionMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Motivo prescripción"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvNroLoteMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Nro. lote"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvAccionConMedicamentoFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Acción con medicamento"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <!-- datos medicamento -->
+
+                <!-- datos reportante -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvResumenReporteDatosReportante"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvNombreReportanteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Nombre"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvTelefonoReportanteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Teléfono"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvCorreoReportanteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Correo"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvAutorizacionReportanteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Autorización de contacto"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <TextView
+                    android:id="@+id/tvOcupacionReportanteFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Ocupación"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"/>
+
+                <!-- datos reportante -->
+
+                <!-- datos concomitantes-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvResumenReporteDatosConcomitantes"
+                    android:textColor="@color/light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutConcomitantesFrmResumenReporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- botones -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutFrmResumenReporteBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFrmResumenReporteTextViews"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/second_color_logo"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp">
+
+            <Button
+                android:id="@+id/btnPreviousFrmResumenReporte"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/btnPrevious"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:backgroundTint="@color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/third_color"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            >
+
+            <Button
+                android:id="@+id/btnSendFrmResumenReporte"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/btnSend"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:backgroundTint="@color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@color/light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/dark"
+                        app:boxStrokeColor="@color/dark"
+                        app:hintTextColor="@color/dark"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNombreConcomitanteDialogConcomitante"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:hint="@string/etMedicamentoConcomitanteNombre"
+                            android:textColor="@color/dark"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/dark"
+                        app:boxStrokeColor="@color/dark"
+                        app:hintTextColor="@color/dark"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFechaInicioDialogConcomitante"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="date"
+                            android:hint="@string/etMedicamentoConcomitanteFechaInicio"
+                            android:textColor="@color/dark"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/dark"
+                        app:boxStrokeColor="@color/dark"
+                        app:hintTextColor="@color/dark"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFechaFinDialogConcomitante"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="date"
+                            android:hint="@string/etMedicamentoConcomitanteFechaFin"
+                            android:textColor="@color/dark"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:textColorHint="@color/dark"
+                            app:boxStrokeColor="@color/dark"
+                            app:hintTextColor="@color/dark"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etDosisDialogConcomitante"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="text"
+                                android:hint="@string/etMedicamentoConcomitanteDosis"
+                                android:textColor="@color/dark"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:textColorHint="@color/dark"
+                            app:boxStrokeColor="@color/dark"
+                            app:hintTextColor="@color/dark"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etFrecuenciaDialogConcomitante"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="text"
+                                android:hint="@string/etMedicamentoConcomitanteFrecuencia"
+                                android:textColor="@color/dark"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/dark"
+                        app:boxStrokeColor="@color/dark"
+                        app:hintTextColor="@color/dark"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etViaAdministracionDialogConcomitante"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:hint="@string/etMedicamentoConcomitanteViaAdministracion"
+                            android:textColor="@color/dark"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:textColorHint="@color/dark"
+                        app:boxStrokeColor="@color/dark"
+                        app:hintTextColor="@color/dark"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etMotivoPrescripcionDialogConcomitante"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="textMultiLine"
+                            android:hint="@string/etMedicamentoConcomitanteMotivoIndicacion"
+                            android:textColor="@color/dark"
+                            android:maxLines="3"
+                            android:gravity="top"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </ScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- botones -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/second_color_logo"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="10dp">
+
+                <Button
+                    android:id="@+id/btnCancelarDialogConcomitante"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/btnCancel"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light"
+                    android:backgroundTint="@color/transparent"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/third_color"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="10dp"
+                >
+
+                <Button
+                    android:id="@+id/btnAgregarDialogConcomitante"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/btnAdd"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light"
+                    android:backgroundTint="@color/transparent"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
